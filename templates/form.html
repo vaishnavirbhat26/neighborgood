@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Neighborgood - Interest Form</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <script src="script.js"></script>
+    </head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-left">
+        <a href="index.html" class="navbar-logo"> 
+          <img class="logo" src="{{ url_for('static', filename='logo.jpeg') }}" alt="Neighborgood" width="30" height="24">
+          Neighborgood</a>
+    </div>
+    <div class = "navbar-right">
+        <a href="index.html" class="navbar-link">Home</a>
+        <a href="#services" class="navbar-link">Services</a>
+        <a href="events.html" class="navbar-link">Events</a>
+    </div>
+  </nav>
+
+
+    <div class="form-content">
+        <h2>Get Started!</h2>
+        <!--<form action="https://example.com/submit" method="post">
+            <fieldset>
+              <legend>Name</legend>
+              <input type="text" name="text" class="input" placeholder="Type here...">
+            </fieldset>
+            <fieldset class = "contact-neighbor">
+              <legend>How to contact me</legend>
+              <input type="text" name="text" class="input" placeholder="Your email address">
+              <input type="text" name="text" class="input" placeholder="Your Phone Number">
+              <input type="text" name="text" class="input" placeholder="Your address">
+            </fieldset>
+            <fieldset>
+              <legend>Shared Activities</legend>
+              <input type="checkbox" name="activities[]" value="walking" checked> Walking
+              <input type="checkbox" name="activities[]" value="running" checked> Running
+              <input type="checkbox" name="activities[]" value="bicycling"> Bicycling
+              <input type="checkbox" name="activities[]" value="dogwalking"> Dogwalking
+              <input type="checkbox" name="activities[]" value="gardening"> Gardening
+              <input type="checkbox" name="activities[]" value="swimming"> Swimming
+            </fieldset>
+            <fieldset>
+              <legend>Walking speeds</legend>
+              <input type="radio" name="walking_speed" value="slow" checked> Slow
+              <input type="radio" name="walking_speed" value="moderate"> Moderate
+              <input type="radio" name="walking_speed" value="fast"> Fast
+            </fieldset>
+            <fieldset>
+              <legend>Other activities</legend>
+              <input type="text" name="text" class="input" placeholder="Type here...">
+            </fieldset>
+            <button value="Submit">Submit</button>
+          </form>-->
+
+
+
+        <form id="interestForm" action="/submit" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required><br><br>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br><br>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required><br><br>
+
+          <label for="address">Present Address:</label>
+          <input type="text" id="address" name="address" required><br><br>
+
+          <label class="activities">Shared Activities:</label><br>
+          <input type="checkbox" name="activities" value="running"> Running<br>
+          <input type="checkbox" name="activities" value="walking"> Walking<br>
+          <input type="checkbox" name="activities" value="bicycling"> Bicycling<br>
+          <input type="checkbox" name="activities" value="dogwalking"> Dogwalking<br>
+          <input type="checkbox" name="activities" value="gardening"> Gardening<br>
+          <input type="checkbox" name="activities" value="swimming"> Swimming<br>
+          
+
+          <label class="otherActivities" for="otherActivities">Other Activities:</label>
+          <input type="text" id="otherActivities" name="otherActivities"><br><br>
+
+          <button type="submit">Submit</button>
+        </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+          
+    </div>
+    <!-- Other content here -->
+</body>
+</html>
